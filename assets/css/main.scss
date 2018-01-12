@@ -1,0 +1,145 @@
+@import 'bootstrap';
+@import 'vendor/lynch';
+@import 'vendor/app';
+
+$red: #EE5050 !default;
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/root";
+@import "bootstrap/print";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+//@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+//@import "bootstrap/button-group";
+//@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/card";
+//@import "bootstrap/breadcrumb";
+//@import "bootstrap/pagination";
+//@import "bootstrap/badge";
+@import "bootstrap/jumbotron";
+//@import "bootstrap/alert";
+//@import "bootstrap/progress";
+//@import "bootstrap/media";
+@import "bootstrap/list-group";
+//@import "bootstrap/close";
+//@import "bootstrap/modal";
+//@import "bootstrap/tooltip";
+//@import "bootstrap/popover";
+//@import "bootstrap/carousel";
+@import "bootstrap/utilities";
+
+// everything else
+//@import 'vendor/medicalinsure';
+//@import 'vendor/lynch';
+
+@include media-breakpoint-only(md) {
+  .type-container {
+    margin-top: 30%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-brand {
+    position: absolute;
+    left: 25%; // Width of text
+    text-align: center;
+    margin: auto;
+    width: 50% !important;
+  }
+
+  .type-container {
+    margin: 45%;
+  }
+
+}
+
+.body {
+  width: 100%;
+}
+
+
+.bg-black {
+  background-color: black;
+}
+
+@keyframes portraitFadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes textFadeIn {
+  from {color: black;}
+  to {color: white;}
+}
+
+/*
+    Example usage:
+    @include animation(10s, 5s, changecolour)
+ */
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+#portrait-image {
+  @include animation(1, 5s, portraitFadeIn)
+}
+
+#type-code {
+color: white;
+white-space: nowrap;
+overflow: hidden;
+width: 100%;
+animation: type 2s steps(60, end);
+}
+
+#type-code:nth-child(2){
+animation: type2 4s steps(60, end);
+}
+
+#blink {
+animation: blink 1s infinite;
+}
+
+@keyframes type{
+from { width: 0; }
+}
+
+@keyframes type2{
+0%{width: 0;}
+50%{width: 0;}
+100%{ width: 100; }
+}
+
+@keyframes blink{
+to{opacity: .0;}
+}
