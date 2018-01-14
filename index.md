@@ -2,4 +2,7 @@
 layout: default
 ---
 
-{% include quote-form.html %}
+{% include banner.html %}
+{% include about.html %}
+{% include parallax.html %}
+{% include portfolio.html %}

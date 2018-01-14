@@ -19,7 +19,6 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-assets"
   gem 'uglifier'
-  gem "github-pages", group: :jekyll_plugins
   gem "bootstrap", '~> 4.0.0.beta2.1'
 end
 
