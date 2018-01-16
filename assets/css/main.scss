@@ -1,6 +1,6 @@
 @import 'bootstrap';
-@import 'vendor/lynch';
-@import 'vendor/app';
+//@import 'vendor/lynch';
+//@import 'vendor/app';
 
 $red: #EE5050 !default;
 
@@ -58,6 +58,16 @@ h2 {
   font-family: 'Raleway', serif;
 }
 
+.icons {
+  font-size: 100px;
+  font-weight: 700;
+  color: #2C2C2C;
+  text-align: center;
+  font-family: 'Raleway', serif;
+}
+
+
+
 p {
   font-family: 'Raleway', serif;
   color: #2C2C2C;
@@ -66,6 +76,7 @@ p {
   line-height: 180%;
   font-weight: 300;
 }
+
 
 #portrait-image {
   padding-top: 20%;
@@ -104,7 +115,8 @@ body {
 
 .parallax {
   background: url("/assets/images/code-bg.png") fixed 100%;
-  opacity: 0.6
+  background-position: left;
+  opacity: 0.6;
 }
 
 .parallax-inner {

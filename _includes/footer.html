@@ -1,37 +1,14 @@
 <footer class="footer bg-dark text-light">
-  <div class="footer-section social-links">
-    <div class="container">
-      <span class="mr-2">Follow us: </span>
-      <a href="{{ site.facebook-link }}" target="_blank">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x fa-inverse text-light"></i>
-          <i class="fa fa-facebook fa-stack-1x text-dark"></i>
-        </span>
+  <div class="clearfix">
+    <h2 style="align-text: center; color: white;">Contact me! 🙋‍♂️</h2>
+    <p style="text-align: center; color: white;">{{ site.email }} <br />
+      <a class="btn btn-outline-secondary">
+          <i class="fa fa-fw fa-phone"></i>
+            {{ site.phone }}
       </a>
-      <a href="{{ site.twitter-link }}" target="_blank">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x fa-inverse text-light"></i>
-          <i class="fa fa-twitter fa-stack-1x text-dark"></i>
-        </span>
-      </a>
-      <a href="{{ site.instagram-link }}" target="_blank">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x fa-inverse text-light"></i>
-          <i class="fa fa-instagram fa-stack-1x text-dark"></i>
-        </span>
-      </a>
-    </div>
+    </p>
   </div>
-  <div class="footer-section">
-    {% include footer-main.html %}
-  </div>
-  <div class="footer-section">
-    <div class="container">
-      <div class="copyright">
-        <p class="small m-0">Copyright © {{ 'now' | date: "%Y" }} {{ site.title }}. {{ site.description | escape }}</p>
-      </div>
-    </div>
-  </div>
+  <div class="clearfix"></div>
   {% asset main.js %}
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

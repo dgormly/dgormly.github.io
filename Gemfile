@@ -29,3 +29,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "sprockets", "~> 4.0.beta", {
   require: false
 }
+
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
