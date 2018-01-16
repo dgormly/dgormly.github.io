@@ -1,0 +1,72 @@
+---
+---
+
+@keyframes portraitFadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes textFadeIn {
+  from {color: black;}
+  to {color: white;}
+}
+
+/*
+    Example usage:
+    @include animation(10s, 5s, changecolour)
+ */
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+#portrait-image {
+  @include animation(1, 5s, portraitFadeIn)
+}
+
+#type-code {
+color: white;
+white-space: nowrap;
+overflow: hidden;
+width: 100%;
+animation: type 2s steps(60, end);
+}
+
+#type-code:nth-child(2){
+animation: type2 4s steps(60, end);
+}
+
+#blink {
+animation: blink 1s infinite;
+}
+
+@keyframes type{
+from { width: 0; }
+}
+
+@keyframes type2{
+0%{width: 0;}
+50%{width: 0;}
+100%{ width: 100; }
+}
+
+@keyframes blink{
+to{opacity: .0;}
+}

@@ -1,0 +1,18 @@
+@keyframes portraitFadeIn { from { opacity: 0; }
+  to { opacity: 1; } }
+@keyframes textFadeIn { from { color: black; }
+  to { color: white; } }
+/* Example usage: @include animation(10s, 5s, changecolour) */
+#portrait-image { -webkit-animation-delay: 1; -webkit-animation-duration: 5s; -webkit-animation-name: portraitFadeIn; -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */ -moz-animation-delay: 1; -moz-animation-duration: 5s; -moz-animation-name: portraitFadeIn; -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */ -o-animation-delay: 1; -o-animation-duration: 5s; -o-animation-name: portraitFadeIn; -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */ animation-delay: 1; animation-duration: 5s; animation-name: portraitFadeIn; animation-fill-mode: forwards; /* this prevents the animation from restarting! */ }
+
+#type-code { color: white; white-space: nowrap; overflow: hidden; width: 100%; animation: type 2s steps(60, end); }
+
+#type-code:nth-child(2) { animation: type2 4s steps(60, end); }
+
+#blink { animation: blink 1s infinite; }
+
+@keyframes type { from { width: 0; } }
+@keyframes type2 { 0% { width: 0; }
+  50% { width: 0; }
+  100% { width: 100; } }
+@keyframes blink { to { opacity: .0; } }

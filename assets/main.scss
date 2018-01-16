@@ -1,0 +1,165 @@
+---
+---
+
+//@import 'vendor/lynch';
+//@import 'vendor/app';
+
+$red: #EE5050 !default;
+//@import "banner";
+
+@import url('https://fonts.googleapis.com/css?family=Ralway');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|Ralway');
+
+h2 {
+  font-size: 200%;
+  font-weight: 700;
+  color: #2C2C2C;
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'Raleway', serif;
+}
+
+.icons {
+  font-size: 100px;
+  font-weight: 700;
+  color: #2C2C2C;
+  text-align: center;
+  font-family: 'Raleway', serif;
+}
+
+
+
+p {
+  font-family: 'Raleway', serif;
+  color: #2C2C2C;
+  font-size: 140%;
+  text-align: justify;
+  line-height: 180%;
+  font-weight: 300;
+}
+
+
+#portrait-image {
+  padding-top: 20%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.side-image {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.card-img-top {
+  max-height: 20rem;
+  width: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  height: 100%;
+}
+
+.card {
+  height: 40rem;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.parallax {
+  background: url("/assets/images/code-bg.png") fixed 100%;
+  background-position: left;
+  opacity: 0.6;
+}
+
+.parallax-inner {
+  padding-top: 10%;
+}
+
+
+.bg-black {
+  background-color: black;
+}
+
+.clearfix {
+  padding-top: 5rem;
+}
+
+
+@keyframes portraitFadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes textFadeIn {
+  from {color: black;}
+  to {color: white;}
+}
+
+/*
+    Example usage:
+    @include animation(10s, 5s, changecolour)
+ */
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+#portrait-image {
+  @include animation(1, 5s, portraitFadeIn)
+}
+
+#type-code {
+color: white;
+white-space: nowrap;
+overflow: hidden;
+width: 100%;
+animation: type 2s steps(60, end);
+}
+
+#type-code:nth-child(2){
+animation: type2 4s steps(60, end);
+}
+
+#blink {
+animation: blink 1s infinite;
+}
+
+@keyframes type{
+from { width: 0; }
+}
+
+@keyframes type2{
+0%{width: 0;}
+50%{width: 0;}
+100%{ width: 100; }
+}
+
+@keyframes blink{
+to{opacity: .0;}
+}
